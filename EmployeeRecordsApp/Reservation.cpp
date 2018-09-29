@@ -5,22 +5,12 @@
 using namespace std;
 
 namespace AirlineReservationSystem {
-	Reservation::Reservation(const std::string& firstName,
+	Reservation::Reservation(const int& flightNumber, const std::string& firstName,
 		const std::string& lastName)
-		: mFirstName(firstName), mLastName(lastName)
+		: mFlightNumber(flightNumber), mFirstName(firstName), mLastName(lastName)
 	{
 		/*mFirstName = firstName;
 		mLastName = lastName;*/
-	}
-
-	void Reservation::promote(int raiseAmount)
-	{
-		setSalary(getSalary() + raiseAmount);
-	}
-
-	void Reservation::demote(int demeritAmount)
-	{
-		setSalary(getSalary() - demeritAmount);
 	}
 
 	void Reservation::doReserve()
@@ -54,15 +44,6 @@ namespace AirlineReservationSystem {
 	}
 
 
-	void Reservation::setSalary(int newSalary) {
-		mSalary = newSalary;
-	}
-
-	int Reservation::getSalary() const {
-		return mSalary;
-	}
-
-
 	void Reservation::setConfirmationNumber(int employeeNumber) {
 		mConfirmationNumber = employeeNumber;
 	}
@@ -77,13 +58,14 @@ namespace AirlineReservationSystem {
 
 	void Reservation::display() const
 	{
-		cout << "Employee: " << getLastName() << ", " << getFirstName() << endl;
+		cout << "Reservation Info" << endl;
+		cout << "Passenger: " << getLastName() << ", " << getFirstName() << endl;
 		cout << "-------------------------" << endl;
-		cout << (isBooked() ? "Current Employee" : "Former Employee") << endl;
-		cout << "Employee Number: " << getConfirmationNumber() << endl;
-		cout << "Salary: $" << getSalary() << endl;
+		cout << (isBooked() ? "Booked" : "Cancelled") << endl;
+		cout << "Confirmation Number: " << getConfirmationNumber() << endl;
 		cout << endl;
 	}
+	
 
 }
 

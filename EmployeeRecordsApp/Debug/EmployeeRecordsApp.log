@@ -1,6 +1,6 @@
-﻿  stdafx.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (EmployeeRecordsApp.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  AirlineReservationSystem.cpp
   Database.cpp
-  Employee.cpp
-  EmployeeRecordsApp.cpp
+  Reservation.cpp
   Generating Code...
-  EmployeeRecordsApp.vcxproj -> C:\Users\Courtney\source\repos\OneDrive_2018-09-21\EmployeeRecordsApp\Debug\EmployeeRecordsApp.exe
+  EmployeeRecordsApp.vcxproj -> C:\Users\Courtney\Documents\GitHub\KalAcademy-Team2_Assingment2\Debug\AirlineReservationSystem.exe

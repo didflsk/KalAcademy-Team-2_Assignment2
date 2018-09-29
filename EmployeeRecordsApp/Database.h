@@ -5,18 +5,19 @@
 #include "Reservation.h"
 
 namespace AirlineReservationSystem {
-	const int kFirstEmployeeNumber = 1000;
+	const int kFirstConfirmationNumber = 1000;
 
 	class Database
 	{
 	public:
-		Reservation& addEmployee(const std::string& firstName,
+		Reservation& addReservation(const int& flightNumber, const std::string& firstName,
 			const std::string& lastName);
-		Reservation& getEmployee(int employeeNumber);
-		Reservation& getEmployee(const std::string& firstName,
+		Reservation& getReservation(int confirmationNumber);
+		Reservation& getReservation(const std::string& firstName,
 			const std::string& lastName);
 
-		void displayAll() const;
+		void displayAll(const std::string& firstName,
+			const std::string& lastName) const;
 		void displayCurrent() const;
 		void displayFormer() const;
 
